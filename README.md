@@ -1,133 +1,38 @@
-<p align="center">
-  <a href="https://onchainkit.xyz">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./site/docs/public/logo/v0-12.png">
-      <img alt="OnchainKit logo vibes" src="./site/docs/public/logo/v0-12.png" width="auto">
-    </picture>
-  </a>
-</p>
+# Onchain Package
 
-# OnchainKit
+## Getting Started
 
-<p align="left">
-  React components and TypeScript utilities for top-tier onchain apps.
-<p>
+To get started with the `onchain` package, follow these steps:
 
-<p align="left">
-  <a href="https://www.npmjs.com/package/@coinbase/onchainkit" target="_blank" rel="noopener noreferrer">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@coinbase/onchainkit?colorA=21262d&colorB=21262d&style=flat">
-      <img src="https://img.shields.io/npm/v/@coinbase/onchainkit?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
-    </picture>
-  </a>
-  <a href="https://github.com/coinbase/onchainkit/blob/main/LICENSE.md" target="_blank" rel="noopener noreferrer">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@coinbase/onchainkit?colorA=21262d&colorB=21262d&style=flat">
-      <img src="https://img.shields.io/npm/l/@coinbase/onchainkit?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
-    </picture>
-  </a>
-  <a href="https://www.npmjs.com/package/@coinbase/onchainkit" target="_blank" rel="noopener noreferrer">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@coinbase/onchainkit?colorA=21262d&colorB=21262d&style=flat">
-      <img src="https://img.shields.io/npm/dm/@coinbase/onchainkit?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
-    </picture>
-  </a>
-  <a href="https://bundlephobia.com/result?p=@coinbase/onchainkit" target="_blank" rel="noopener noreferrer">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://flat.badgen.net/bundlephobia/minzip/@coinbase/onchainkit">
-      <img width="146" height="20" src="https://flat.badgen.net/bundlephobia/minzip/@coinbase/onchainkit" alt="Minified + gzip package size for @coinbase/onchainkit in KB" class="badge--in-table"></a>
-    </picture>
-  </a>
-</p>
+1. Ensure you have Node.js and npm installed on your machine.
+2. Create a new directory for your project and navigate into it.
+3. Run `npm init` to create a `package.json` file. Follow the prompts to set up your package.
+4. Add the necessary dependencies and devDependencies to your `package.json` file.
+5. Create the necessary files and directories for your project.
 
-<br />
+Here is a basic example of what your `package.json` file might look like:
 
-## Documentation
-
-For documentation and guides, visit [onchainkit.xyz](https://onchainkit.xyz/).
-
-## Features
-
-OnchainKit offers four themes packed with React components and TypeScript utilities ready for action.
-
-- [Farcaster](https://onchainkit.xyz/farcaster/introduction)
-- [Frame](https://onchainkit.xyz/frame/introduction)
-- [Identity](https://onchainkit.xyz/identity/introduction)
-- [XMTP](https://onchainkit.xyz/xmtp/introduction)
-
-## Overview
-
-To integrate OnchainKit into your project, begin by installing the necessary packages.
-
-```bash
-# Yarn: Add library
-yarn add @coinbase/onchainkit
-# Yarn: Depending on the components or utilities you choose,
-# you may end up utilizing any of those libraries.
-yarn add viem@2.x react@18 react-dom@18
-
-# or
-
-# Use NPM
-npm install @coinbase/onchainkit
-npm install viem@2.x react@18 react-dom@18
-
-# Use PNPM
-pnpm add @coinbase/onchainkit
-npm install viem@2.x react@18 react-dom@18
-```
-
-Then, feel free to utilize any of the components or utilities, such as `FrameMetadata`.
-
-```tsx
-import { FrameMetadata } from '@coinbase/onchainkit';
-
-export default function HomePage() {
-  return (
-    ...
-    <FrameMetadata
-      buttons={[
-        {
-          label: 'Tell me the story',
-        },
-        {
-          action: 'link',
-          label: 'Link to Google',
-          target: 'https://www.google.com'
-        },
-        {
-          action: 'post_redirect',
-          label: 'Redirect to cute pictures',
-        },
-      ]}
-      image={{
-       src: 'https://zizzamia.xyz/park-3.png',
-       aspectRatio: '1:1'
-      }}
-      input={{
-        text: 'Tell me a boat story',
-      }}
-      postUrl="https://zizzamia.xyz/api/frame"
-    />
-    ...
-  );
+```json
+{
+  "name": "onchain",
+  "version": "0.1.0",
+  "description": "A package for onchain utilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "some-dependency": "^1.0.0"
+  },
+  "devDependencies": {
+    "some-dev-dependency": "^1.0.0"
+  }
 }
 ```
 
-## Community ☁️ 🌁 ☁️
+You can then create your main file, for example, `index.js`, and start adding your code.
 
-Check out the following places for more OnchainKit-related content:
-
-- Follow [@zizzamia](https://github.com/zizzamia) ([X](https://twitter.com/zizzamia), [Warpcast](https://warpcast.com/zizzamia)) for project updates
-- Join the discussions on our [OnchainKit warpcast channel](https://warpcast.com/~/channel/onchainkit)
-
-## Authors
-
-- [@zizzamia](https://github.com/zizzamia) ([X](https://twitter.com/Zizzamia), [Warpcast](https://warpcast.com/zizzamia))
-- [@cnasc](https://github.com/cnasc) ([warpcast](https://warpcast.com/cnasc))
-- [@taycaldwell](https://github.com/taycaldwell) ([X](https://twitter.com/taycaldwell_))
-- [@mochikuan](https://github.com/mochikuan) ([X](https://twitter.com/mochikuan))
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+For more detailed instructions, you can refer to the `framegear/package.json` file in this repository as an example.
